@@ -32,7 +32,7 @@
 <body>
     <div class="container" id="game">
         <h2>Trò chơi đoán xu</h2>
-        <p id="money">Số tiền: 500000đ</p>
+        <p id="money">Số tiền: 500.000đ</p>
         <p id="mission">Nhiệm vụ: Thắng 3 lần để nhận 30.000đ</p>
         <input type="number" id="bet" placeholder="Nhập số tiền cược" />
         <div>
@@ -48,7 +48,7 @@
     <script>
         let money = 500.000;
         let wins = 0;
-        let sequences = ['Tài','Tài','Tài','Xỉu','Xỉu','Xỉu','Xỉu','Xỉu','Tài','Xỉu','Tài','Xỉu'];
+        let sequences = ['Tài','Xỉu','Xỉu','Xỉu','Xỉu','Xỉu','Tài','Xỉu','Tài','Xỉu','Tài','Xỉu'];
         let index = 0;
 
         function play(choice) {
@@ -79,7 +79,7 @@
             if (wins === 3) {
                 document.getElementById('reward').innerText = 'Bạn nhận được 30.000đ! Nhấn để nhận';
                 document.getElementById('reward').onclick = function() {
-                    money += 30000;
+                    money += 30.000;
                     document.getElementById('money').innerText = `Số tiền: ${money}đ`;
                     wins = 0;
                     document.getElementById('wins').innerText = `Số lần thắng: ${wins}`;
